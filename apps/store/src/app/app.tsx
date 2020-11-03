@@ -1,4 +1,5 @@
 import { Header } from '@egghead/store/ui-shared';
+import { formatRating } from '@egghead/store/util-formatters';
 import {
   Card,
   CardActionArea,
@@ -41,7 +42,7 @@ export const App = () => {
                     component="p"
                     className="game-rating"
                   >
-                    <strong>Rating:</strong> {x.rating}
+                    <strong>Rating:</strong> {formatRating(x.rating)}
                   </Typography>
                 </CardContent>
               </CardActionArea>
