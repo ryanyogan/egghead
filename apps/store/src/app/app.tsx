@@ -1,3 +1,4 @@
+import { StoreFeatureGameDetail } from '@egghead/store/feature-game-detail';
 import { Header } from '@egghead/store/ui-shared';
 import { formatRating } from '@egghead/store/util-formatters';
 import {
@@ -8,17 +9,24 @@ import {
   Typography,
 } from '@material-ui/core';
 import React from 'react';
+import { Route, useHistory } from 'react-router-dom';
 import { getAllGames } from '../fake-api';
 import './app.scss';
 
 export const App = () => {
+  const history = useHistory();
+
   return (
     <>
       <Header />
       <div className="container">
         <div className="games-layout">
           {getAllGames().map((x) => (
-            <Card key={x.id} className="game-card">
+            <Card
+              key={x.id}
+              onClick={() => history.push(`/game/${x.id}`)}
+              className="game-card"
+            >
               <CardActionArea>
                 <CardMedia
                   className="game-card-media"
@@ -49,6 +57,7 @@ export const App = () => {
             </Card>
           ))}
         </div>
+        <Route path="/game/:id" component={StoreFeatureGameDetail} />
       </div>
     </>
   );
