@@ -2,7 +2,7 @@ const games = [
   {
     id: 'settlers-in-the-can',
     name: 'Settlers in the Can',
-    image: 'https://media.giphy.com/media/xUNda3pLJEsg4Nedji/giphy.gif',
+    image: '/assets/beans.png', // 'https://media.giphy.com/media/xUNda3pLJEsg4Nedji/giphy.gif',
     description:
       'Help your bug family claim the best real estate in a spilled can of beans.',
     price: 35,
@@ -11,7 +11,7 @@ const games = [
   {
     id: 'chess-pie',
     name: 'Chess Pie',
-    image: 'https://media.giphy.com/media/iCZyBnPBLr0dy/giphy.gif',
+    image: '/assets/chess.png', // 'https://media.giphy.com/media/iCZyBnPBLr0dy/giphy.gif',
     description: 'A circular game of Chess that you can eat as you play.',
     price: 15,
     rating: Math.random(),
@@ -19,9 +19,9 @@ const games = [
   {
     id: 'purrfection',
     name: 'Purrfection',
-    image: 'https://media.giphy.com/media/12xMvwvQXJNx0k/giphy.gif',
+    image: '/assets/cat.png', // 'https://media.giphy.com/media/12xMvwvQXJNx0k/giphy.gif',
     description: 'A cat grooming contest goes horribly wrong.',
-    price: 45,
+    price: 18,
     rating: Math.random(),
   },
 ];
